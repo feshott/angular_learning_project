@@ -1,0 +1,23 @@
+<h1>
+  Welcome to {{ title }}!
+</h1>
+
+<app-date></app-date>
+
+<h2>Angular Routes</h2>
+
+<div>
+  <a routerLink=''>Главная страница</a>
+  <a routerLink='/about'>О нас</a>
+  <a routerLink='/price'>Цена</a>
+  <a routerLink='/news'>Новости</a>
+</div>
+<router-outlet></router-outlet>
+
+<h2>user name</h2>
+<input type="text" [(ngModel)]='username'>
+<button (click)='search()'>search</button>
+<div *ngIf='response'>
+  <img src="{{response.avatar_url}}" alt="">
+  <p>имя {{response.login}}</p>
+</div>

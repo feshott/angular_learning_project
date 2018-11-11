@@ -1,0 +1,27 @@
+<div>
+  <h2>Time</h2>
+  <p>
+    {{time}}
+  </p>
+  <p>{{items}}</p>
+
+  <h2>test ngFor</h2>
+  <p *ngFor="let item of items; let i = index">{{i+1}} {{item}}</p>
+
+  <h2>test ngIf</h2>
+  <p *ngIf="show">i am show!</p>
+
+  <h2>test event</h2>
+  <button (click)=myEvent($event)>event button</button>
+
+  <h2>test input</h2>
+  <input type="text" [(ngModel)]='inputText'>
+  <p>{{inputText}}</p>
+
+  <h2>test style/class</h2>
+  <!-- <p [ngClass]="{ testClass : true }">class 1 Lorem ipsum dolor sit amet.</p> -->
+  <p [ngClass]="{ testClass : showClassItem }">class 1 Lorem ipsum dolor sit amet.</p>
+  <p [class.testClass]="true">class 2 Lorem ipsum dolor sit amet.</p>
+  <p [ngStyle]="{'color':'red','font-size':'25px'}">style Lorem ipsum dolor sit amet.</p>
+  <button (click)="showClass()">toggleClass</button>
+</div>
